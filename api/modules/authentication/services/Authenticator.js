@@ -51,12 +51,9 @@ async function createUser(user) {
   const { password, email, ...userInformations } = user;
   const { salt, hash } = hashPassword(password);
   const [id] = await UsersRepository.createUser({
-    registrationDate: new Date().toISOString(),
     email: email,
     salt,
     password: hash,
-    confirmationToken: generateToken(),
-    active: false,
     ...userInformations,
   });
   return id;
@@ -88,10 +85,6 @@ function hashPassword(password) {
 
 function checkPassword(password, user) {
   return Crypto.comparePassword(password, user.salt, user.password);
-}
-
-function generateToken() {
-  return Crypto.generateToken();
 }
 
 module.exports = {

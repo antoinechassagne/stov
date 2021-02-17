@@ -11,7 +11,7 @@ exports.register = async function (req, res) {
     }
     const sessionId = await Authenticator.initializeSession(userId);
     SessionCookie.setCookie(res, sessionId);
-    res.status(201).send({ userId: user.id });
+    res.status(201).send({ userId });
   } catch (err) {
     res.status(500).send({ error: "Une erreur s'est produite." });
   }
