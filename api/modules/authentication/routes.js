@@ -1,7 +1,4 @@
 const controller = require("./controller");
-const registerSchema = require("./schemas/register");
-const loginSchema = require("./schemas/login");
-const resetPasswordSchema = require("./schemas/resetPassword");
 
 module.exports = [
   {
