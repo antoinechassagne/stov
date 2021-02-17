@@ -1,10 +1,9 @@
 exports.up = function (knex) {
   return knex.schema.createTable("tasks", (table) => {
     table.increments("id").primary();
-    table.string("label").notNullable();
-    table.integer("weight").notNullable();
+    table.integer("taskTemplateId").references("id").inTable("taskTemplates");
     table.integer("userId").references("id").inTable("users");
-    table.integer("routineId").references("id").inTable("routines");
+    table.date("date");
   });
 };
 
