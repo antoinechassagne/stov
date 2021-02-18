@@ -1,31 +1,15 @@
 <template>
   <fragment>
-    <Heading level="1">S'inscrire</Heading>
-    <input
-      v-model="pseudo"
-      id="pseudo"
-      type="text"
-      placeholder="Saisissez votre Pseudo"
-      required
-      class="border-2 border-indigo-400 rounded p-1"
-    />
-    <input
-      v-model="email"
-      id="email"
-      type="text"
-      placeholder="Saisissez votre adresse email"
-      required
-      class="border-2 border-indigo-400 rounded p-1"
-    />
-    <input
-      v-model="password"
-      id="password"
-      type="password"
-      placeholder="Saisissez votre mot de passe"
-      required
-      class="border-2 border-indigo-400 rounded p-1"
-    />
-    <button @click="DemoStart" class="border-2 border-indigo-400 rounded p-1 my-2">S'inscrire</button>
+    <div class="min-h-screen flex bg-gray-50">
+      <div class="max-w-md w-full">
+        <div>
+          <img class="mx-auto w-100" src="../assets/images/signUpBackground.png" alt="Workflow" />
+        </div>
+        <div>
+          <H4>Créer ton profil !</H4>
+        </div>
+      </div>
+    </div>
   </fragment>
 </template>
 

@@ -4,6 +4,7 @@ const SessionCookie = require("../modules/authentication/services/SessionCookie"
 async function checkSession(req, res, next) {
   try {
     const sessionId = getSessionIdFromCookie(req);
+    console.log(sessionId);
     if (!sessionId) {
       return res.status(403).send();
     }
