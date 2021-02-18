@@ -5,11 +5,33 @@ exports.createTask = function (task) {
 };
 
 exports.getTask = function (query) {
-  return database("tasks").where(query).first();
+  return new Promise(async (resolve, reject) => {
+    try {
+      const task = await database("tasks").where(query).first();
+      const taskTemplate = await database("taskTemplates").where({ id: task.taskTemplateId }).first();
+      const user = await database("users").where({ id: task.userId }).first();
+      Object.assign(task, { taskTemplate, user });
+      resolve(task);
+    } catch (error) {
+      reject(error);
+    }
+  });
 };
 
 exports.getTasks = function (query) {
-  return database("tasks").where(query);
+  return new Promise(async (resolve, reject) => {
+    try {
+      const tasks = await database("tasks").where(query);
+      for (const task of tasks) {
+        const taskTemplate = await database("taskTemplates").where({ id: task.taskTemplateId }).first();
+        const user = await database("users").where({ id: task.userId }).first();
+        Object.assign(task, { taskTemplate, user });
+      }
+      resolve(tasks);
+    } catch (error) {
+      reject(error);
+    }
+  });
 };
 
 exports.updateTask = function (query, update) {

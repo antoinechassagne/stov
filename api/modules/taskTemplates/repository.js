@@ -5,11 +5,31 @@ exports.createTaskTemplate = function (taskTemplate) {
 };
 
 exports.getTaskTemplate = function (query) {
-  return database("taskTemplates").where(query).first();
+  return new Promise(async (resolve, reject) => {
+    try {
+      const taskTemplate = await database("taskTemplates").where(query).first();
+      const colocation = await database("colocations").where({ id: taskTemplate.colocationId }).first();
+      Object.assign(taskTemplate, { colocation });
+      resolve(taskTemplate);
+    } catch (error) {
+      reject(error);
+    }
+  });
 };
 
 exports.getTaskTemplates = function (query) {
-  return database("taskTemplates").where(query);
+  return new Promise(async (resolve, reject) => {
+    try {
+      const taskTemplates = database("taskTemplates").where(query);
+      for (const taskTemplate of taskTemplates) {
+        const colocation = await database("colocations").where({ id: taskTemplate.colocationId }).first();
+        Object.assign(taskTemplate, { colocation });
+      }
+      resolve(taskTemplates);
+    } catch (error) {
+      reject(error);
+    }
+  });
 };
 
 exports.updateTaskTemplate = function (query, update) {
