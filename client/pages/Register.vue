@@ -9,7 +9,6 @@ import Heading from "@/components/texts/Heading";
 
 export default {
   name: "PageRegister",
-  middleware: ["guest"],
   components: {
     Heading,
   },

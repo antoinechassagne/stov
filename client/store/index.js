@@ -4,8 +4,4 @@ export const getters = {};
 
 export const mutations = {};
 
-export const actions = {
-  async nuxtServerInit(context) {
-    await context.dispatch("authentication/getLoggedUser");
-  },
-};
+export const actions = {};

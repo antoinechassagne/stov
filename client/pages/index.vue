@@ -23,7 +23,6 @@ import Heading from "@/components/texts/Heading";
 
 export default {
   name: "PageHome",
-  middleware: ["authenticated"],
   components: {
     Heading,
   },

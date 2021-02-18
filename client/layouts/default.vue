@@ -1,6 +1,5 @@
 <template>
   <fragment>
-    <BaseHeader :loggedUser="loggedUser" />
     <main class="container mx-auto">
       <Nuxt />
     </main>
@@ -15,11 +14,6 @@ export default {
   name: "DefaultLayout",
   components: {
     BaseHeader,
-  },
-  computed: {
-    ...mapGetters({
-      loggedUser: "authentication/loggedUser",
-    }),
   },
 };
 </script>
