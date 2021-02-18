@@ -20,6 +20,7 @@ module.exports = {
         10: '#FFEDE7'
       },
       black: '#141414',
+      white: '#FFFFFF',
       gray: {
         70: '#5B5B5B',
         30: '#B9B9B9',
