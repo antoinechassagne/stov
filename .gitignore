@@ -9,6 +9,6 @@ node_modules
 .nuxt
 dist
 *sw.js
-
+.idea
 # Sonarqube
 .scannerwork
