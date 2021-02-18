@@ -28,9 +28,9 @@
         type="submit"
         @click.prevent="login"
         class="border-2 border-indigo-400 rounded p-1 my-2"
-        :disabled="loading"
+        :disabled="loading.login"
       >
-        <template v-if="loading">Connexion...</template>
+        <template v-if="loading.login">Connexion...</template>
         <template v-else>Se connecter</template>
       </button>
     </form>
