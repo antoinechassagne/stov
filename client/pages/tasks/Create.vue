@@ -22,15 +22,12 @@
       </div>
 
       <label class="block">
-        <input class="mr-2" type="checkbox">
-        <span>
-        Tâche quotidienne ?
-      </span>
+        <input class="mr-2" type="checkbox" />
+        <span> Tâche quotidienne ? </span>
       </label>
 
       <button class="bg-blue-100 text-white" @click="createTask">CTA =></button>
     </section>
-
   </fragment>
 </template>
 
@@ -43,13 +40,11 @@ export default {
     Heading,
   },
   methods: {
-    createTask(){
-      this.$router.push('/')
-    }
-  }
-}
+    createTask() {
+      this.$router.push("/tasks");
+    },
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
