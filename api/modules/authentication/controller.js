@@ -26,7 +26,7 @@ exports.login = async function (req, res) {
     }
     const sessionId = await Authenticator.initializeSession(user.id);
     SessionCookie.setCookie(res, sessionId);
-    res.status(200).send({ userId });
+    res.status(200).send({ userId: user.id });
   } catch (err) {
     res.status(500).send({ error: "Une erreur s'est produite." });
   }
