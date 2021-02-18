@@ -16,7 +16,7 @@ export default {
   css: [],
   plugins: ["~/plugins/axios", "~/plugins/vue-fragment", "~/plugins/route-link"],
   components: true,
-  buildModules: ["@nuxtjs/dotenv", "@nuxtjs/tailwindcss"],
+  buildModules: ["@nuxtjs/dotenv", "@nuxtjs/tailwindcss", "@nuxtjs/pwa"],
   modules: ["@nuxtjs/axios", "@nuxtjs/pwa"],
   axios: {
     baseURL: process.env.API_URL,
@@ -24,14 +24,14 @@ export default {
   },
   pwa: {
     icon: {
-      source: 'static/icon.png'
+      source: "static/icon.png",
     },
     meta: {
-      title: 'Støv'
+      title: "Støv",
     },
     manifest: {
-      name: 'stov',
-      lang: 'en'
+      name: "stov",
+      lang: "en",
     },
-  }
+  },
 };
