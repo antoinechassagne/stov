@@ -22,4 +22,16 @@ export default {
     baseURL: process.env.API_URL,
     credentials: true,
   },
+  pwa: {
+    icon: {
+      source: 'static/icon.png'
+    },
+    meta: {
+      title: 'Støv'
+    },
+    manifest: {
+      name: 'stov',
+      lang: 'en'
+    },
+  }
 };
