@@ -27,7 +27,8 @@ async function authenticateByCredentials(email, password) {
 
 async function authenticateBySessionId(sessionId) {
   const session = await retrieveSession({ id: sessionId });
-  if (!session) {
+  const valid = isSessionValid(session);
+  if (!valid) {
     return;
   }
   const user = await retrieveUser({ id: session.userId });
@@ -38,7 +39,6 @@ async function authenticateBySessionId(sessionId) {
 }
 
 async function initializeSession(userId) {
-  await removePreviousUserSessions(userId);
   const sessionId = createSession(userId);
   return sessionId;
 }
@@ -67,16 +67,22 @@ async function createSession(userId) {
   return sessionId;
 }
 
-function removePreviousUserSessions(userId) {
-  return SessionsRepository.deleteSessions({ userId });
-}
-
 function retrieveUser(query) {
   return UsersRepository.getUser(query);
 }
 
 function retrieveSession(query) {
   return SessionsRepository.getSession(query);
+}
+
+function isSessionValid(session) {
+  if (!session) {
+    return false;
+  }
+  if (new Date(session.expirationDate) <= new Date(Date.now())) {
+    return false;
+  }
+  return true;
 }
 
 function hashPassword(password) {
