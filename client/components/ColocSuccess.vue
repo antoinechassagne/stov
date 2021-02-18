@@ -5,7 +5,7 @@
     <p>Bravo vous avez créer votre collocation n'hésitez pas a le partager grace a ce lien incroyable</p>
   <div>Ceci est le lien incroyable</div> <button>copier le lien</button>
   </div>
-  <button  > Maintenant crée votre premiere tâches </button>
+  <button @click="createTask()" > Maintenant crée votre premiere tâches </button>
 
 </div>
 
