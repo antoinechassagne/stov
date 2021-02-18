@@ -29,6 +29,7 @@ exports.login = async function (req, res) {
     console.log(sessionId);
     res.status(200).send({ userId: user.id });
   } catch (err) {
+    console.log(err);
     res.status(500).send({ error: "Une erreur s'est produite." });
   }
 };
