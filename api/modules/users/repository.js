@@ -16,6 +16,9 @@ exports.getUser = function (query) {
   return new Promise(async (resolve, reject) => {
     try {
       const user = await database("users").where(query).first();
+      if (!user) {
+        return resolve(null);
+      }
       const colocation = await database("colocations").where({ id: user.colocationId }).first();
       const tasks = await database("tasks").where({ userId: user.id });
       Object.assign(user, { colocation, tasks });
