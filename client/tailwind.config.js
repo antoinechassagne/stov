@@ -1,11 +1,12 @@
 module.exports = {
+  variants: {
+    extend: {
+      backgroundColor: ['disabled', 'checked', 'active'],
+      textColor: ['disabled'],
+      borderColor: ['checked', 'active']
+    }
+  },
   theme: {
-    variants: {
-      extend: {
-        backgroundColor: ['disabled'],
-        textColor: ['disabled'],
-      }
-    },
     colors: {
       blue: {
         100: '#0410F1',
