@@ -13,7 +13,7 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
-  css: [],
+  css: ["~/assets/styles/main.scss"],
   plugins: ["~/plugins/axios", "~/plugins/vue-fragment", "~/plugins/route-link"],
   components: true,
   buildModules: ["@nuxtjs/dotenv", "@nuxtjs/tailwindcss", "@nuxtjs/pwa"],
