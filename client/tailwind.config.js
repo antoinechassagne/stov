@@ -1,5 +1,11 @@
 module.exports = {
   theme: {
+    variants: {
+      extend: {
+        backgroundColor: ['disabled'],
+        textColor: ['disabled'],
+      }
+    },
     colors: {
       blue: {
         100: '#0410F1',

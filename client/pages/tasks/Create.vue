@@ -26,18 +26,20 @@
         <span> Tâche quotidienne ? </span>
       </label>
 
-      <button class="bg-blue-100 text-white" @click="createTask">CTA =></button>
+      <Button>CTA =></Button>
     </section>
   </fragment>
 </template>
 
 <script>
 import Heading from "~/components/texts/Heading";
+import Button from "~/components/Button";
 
 export default {
   name: "CreateTask",
   components: {
     Heading,
+    Button
   },
   methods: {
     createTask() {
