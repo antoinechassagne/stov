@@ -1,12 +1,12 @@
 <template>
   <fragment>
     <div class="min-h-screen flex bg-gray-50">
-      <div class="max-w-md w-full">
+      <div class="max-w-md mx-auto">
         <div>
           <img class="mx-auto w-100" src="../assets/images/signUpBackground.png" alt="Workflow" />
         </div>
-        <div>
-          <H4>Créer ton profil !</H4>
+        <div class="-mt-5 rounded-t-lg bg-white w-full h-screen">
+          <h4 class="text-center mt-3 text-2xl">Créer ton profil !</h4>
         </div>
       </div>
     </div>
