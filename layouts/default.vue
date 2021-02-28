@@ -7,8 +7,6 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-
 import BaseHeader from "@/components/BaseHeader";
 export default {
   name: "DefaultLayout",
