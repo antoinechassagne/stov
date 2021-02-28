@@ -1,14 +1,18 @@
 <template>
-<div>
-  <h2>Create Coloc Succes work</h2>
+<div class="h-screen max-h-screen " >
+<div class="flex  h-full flex-col justify-around items-center text-center" >
   <div>
-    <p>Bravo vous avez créer votre collocation n'hésitez pas a le partager grace a ce lien incroyable</p>
-  <div>Ceci est le lien incroyable</div> <button>copier le lien</button>
+  <h2>Loft Story est dans la place !</h2>
+  <img class="absolute right-0 top-0" src="../assets/styles/images/maincote.svg"/>
+  <div>
+    <p>Tu peux récupérer ton lien d'invitation maintenant ou le récupérer plus tard dans la section "Colocation"</p>
+  <div>https://stov.space/NcXedl</div> <button>Partager</button>
   </div>
-  <button @click="createTask()" > Maintenant crée votre premiere tâches </button>
+  </div>
+  <button @click="createTask()" > commencer à créer mes tâches</button>
 
 </div>
-
+</div>
 </template>
 
 <script>
