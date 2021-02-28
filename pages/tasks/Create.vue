@@ -5,13 +5,14 @@
         <h1 class="font-bold text-2xl text-center">Nouvelle tâche</h1>
         <div class="bg-blue-10">
           <p class="p-4">
-            Choisis <b>un nom de tâche clair</b> pour que tout le monde le comprenne ; tu peux aussi donner un nom très personnalisé avec tes propres termes !
+            Choisis <b>un nom de tâche clair</b> pour que tout le monde le comprenne ; tu peux aussi donner un nom très
+            personnalisé avec tes propres termes !
           </p>
         </div>
-        <ButtonTransparent>Valider</ButtonTransparent>
+        <BaseButton>Valider</BaseButton>
       </div>
 
-<!--
+      <!--
         <p>Je suis un texte d'explication</p>
         <div class="flex flex-col">
           <label>Nom de la tâche :</label>
@@ -39,18 +40,17 @@
 
         <Button>CTA =></Button>
 -->
-
     </div>
   </fragment>
 </template>
 
 <script>
-import Button from "~/components/Button";
+import BaseButton from "~/components/BaseButton";
 
 export default {
   name: "CreateTask",
   components: {
-    Button
+    BaseButton,
   },
   methods: {
     createTask() {
