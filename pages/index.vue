@@ -1,34 +1,32 @@
 <template>
-  <fragment>
-    <div class="min-h-screen flex bg-gray-50">
-      <div class="max-w-md mx-auto">
-        <img class="header-image" src="../assets/images/header-1.png" />
-        <div class="rounded-t-xl bg-white w-full h-screen content">
-          <h1 class="text-center text-2xl font-bold">Crée ton profil !</h1>
-          <BaseInput label="Choisis un pseudo" placeholder="john" type="text" class="mb-5" />
-          <BaseInput label="Entre ton adresse email" placeholder="john@john.com" type="mail" class="mb-5" />
-          <BaseInput label="Choisis un mot de passe" type="Password" class="mb-5" />
-          <BaseButton @click="next">Créer mon compte</BaseButton>
-          <a href="#" class="link">Connexion</a>
-        </div>
+  <div class="min-h-screen flex bg-gray-50">
+    <div class="max-w-md mx-auto">
+      <img class="header-image" src="../assets/images/header-1.png" />
+      <div class="rounded-t-xl bg-white w-full h-screen content">
+        <h1 class="text-center text-2xl font-bold">Crée ton profil !</h1>
+        <BaseInput label="Choisis un pseudo" placeholder="john" type="text" class="mb-5" />
+        <BaseInput label="Entre ton adresse email" placeholder="john@john.com" type="mail" class="mb-5" />
+        <BaseInput label="Choisis un mot de passe" type="Password" class="mb-5" />
+        <ButtonPrimary @click="goToNextPage">Créer mon compte</ButtonPrimary>
+        <a href="#" class="link">Connexion</a>
       </div>
     </div>
-  </fragment>
+  </div>
 </template>
 
 <script>
 import BaseInput from "@/components/BaseInput";
-import BaseButton from "@/components/BaseButton";
+import ButtonPrimary from "@/components/ButtonPrimary";
 
 export default {
   name: "PageRegister",
   components: {
     BaseInput,
-    BaseButton,
+    ButtonPrimary,
   },
   methods: {
-    next() {
-      this.$router.push("/tasks");
+    goToNextPage() {
+      this.$router.push("/onboarding");
     },
   },
 };

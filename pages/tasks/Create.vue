@@ -1,18 +1,17 @@
 <template>
-  <fragment>
-    <div class="min-h-screen flex bg-gray-50">
-      <div class="max-w-md mx-auto">
-        <h1 class="font-bold text-2xl text-center">Nouvelle tâche</h1>
-        <div class="bg-blue-10">
-          <p class="p-4">
-            Choisis <b>un nom de tâche clair</b> pour que tout le monde le comprenne ; tu peux aussi donner un nom très
-            personnalisé avec tes propres termes !
-          </p>
-        </div>
-        <BaseButton>Valider</BaseButton>
+  <div class="min-h-screen flex bg-gray-50">
+    <div class="max-w-md mx-auto">
+      <h1 class="font-bold text-2xl text-center">Nouvelle tâche</h1>
+      <div class="bg-blue-10">
+        <p class="p-4">
+          Choisis <b>un nom de tâche clair</b> pour que tout le monde le comprenne ; tu peux aussi donner un nom très
+          personnalisé avec tes propres termes !
+        </p>
       </div>
+      <ButtonPrimary>Valider</ButtonPrimary>
+    </div>
 
-      <!--
+    <!--
         <p>Je suis un texte d'explication</p>
         <div class="flex flex-col">
           <label>Nom de la tâche :</label>
@@ -40,17 +39,16 @@
 
         <Button>CTA =></Button>
 -->
-    </div>
-  </fragment>
+  </div>
 </template>
 
 <script>
-import BaseButton from "~/components/BaseButton";
+import ButtonPrimary from "~/components/ButtonPrimary";
 
 export default {
   name: "CreateTask",
   components: {
-    BaseButton,
+    ButtonPrimary,
   },
   methods: {
     createTask() {

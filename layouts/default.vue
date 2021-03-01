@@ -1,9 +1,7 @@
 <template>
-  <fragment>
-    <main class="container mx-auto">
-      <Nuxt />
-    </main>
-  </fragment>
+  <main class="container mx-auto">
+    <Nuxt />
+  </main>
 </template>
 
 <script>
