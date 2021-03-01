@@ -18,7 +18,7 @@ export default {
     ],
   },
   css: ["~/assets/styles/main.scss"],
-  plugins: ["~/plugins/vue-fragment", "~/plugins/route-link"],
+  plugins: ["~/plugins/route-link"],
   components: true,
   buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/pwa"],
   modules: ["@nuxtjs/pwa"],

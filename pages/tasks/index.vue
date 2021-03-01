@@ -1,5 +1,5 @@
 <template>
-  <fragment>
+  <div>
     <Heading level="1">Liste des tâches</Heading>
     <Heading level="2">Cette semaine</Heading>
     <ul>
@@ -15,11 +15,10 @@
     </ul>
     <button class="rounded-full h-12 bg-blue-100 p-2 text-white" @click="goToCreateTaskPage">Nouvelle tâche</button>
     <SwipableTasksList :tasks="tasks" @updateTaskState="updateTaskState" />
-  </fragment>
+  </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 import Heading from "@/components/texts/Heading";
 import SwipableTasksList from "@/components/tasks/SwipableTasksList";
 
@@ -49,9 +48,6 @@ export default {
     };
   },
   computed: {
-    ...mapGetters({
-      loggedUser: "authentication/loggedUser",
-    }),
     todayTasks() {
       return this.tasks.filter((task) => task.daily);
     },

@@ -1,17 +1,24 @@
 <template>
   <div class="flex flex-col">
     <label class="label">{{ label }}</label>
-    <input class="input" :placeholder="placeholder" :type="type" />
+    <input
+      v-model="inputValue"
+      class="input"
+      :placeholder="placeholder"
+      :type="type"
+      @change="$emit('change', inputValue)"
+    />
   </div>
 </template>
 
 <script>
 export default {
   name: "BaseInput",
-  props: {
-    label: {},
-    placeholder: {},
-    type: {},
+  props: ["label", "placeholder", "type", "initialValue"],
+  data() {
+    return {
+      inputValue: this.initialValue || "",
+    };
   },
 };
 </script>
