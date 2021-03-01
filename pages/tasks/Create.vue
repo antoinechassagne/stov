@@ -42,7 +42,7 @@
             </div>
           </div>
 
-          <ButtonPrimary>Créer la tâche ménagère</ButtonPrimary>
+          <ButtonPrimary aria-disabled="true">Créer la tâche ménagère</ButtonPrimary>
         </div>
       </div>
     </div>
