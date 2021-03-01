@@ -3,12 +3,16 @@
     <div class="min-h-screen flex bg-gray-50">
       <div class="max-w-md mx-auto">
         <h1 class="font-bold text-2xl text-center">Nouvelle tâche</h1>
-        <div class="bg-blue-10">
-          <p class="p-4">
-            Choisis <b>un nom de tâche clair</b> pour que tout le monde le comprenne ; tu peux aussi donner un nom très personnalisé avec tes propres termes !
-          </p>
+        <div class="mx-5">
+          <div class="bg-blue-10">
+            <p class="p-4">
+              Choisis <b>un nom de tâche clair</b> pour que tout le monde le comprenne ; tu peux aussi donner un nom très personnalisé avec tes propres termes !
+            </p>
+          </div>
+          <BaseInput label="Nom de la tâche" placeholder="Passer le balais" type="text"></BaseInput>
+          <ButtonTransparent>Valider le nom</ButtonTransparent>
+          <Button>Créer la tâche ménagère</Button>
         </div>
-        <ButtonTransparent>Valider</ButtonTransparent>
       </div>
 
 <!--
