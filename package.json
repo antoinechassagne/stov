@@ -1,5 +1,18 @@
 {
-  "name": "stov",
+  "name": "stov-client",
+  "scripts": {
+    "develop": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^3.0.2",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
+    "vue-swipe-actions": "^2.0.0-beta.20"
+  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.10.0",
@@ -7,10 +20,8 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.5.0",
-    "prettier": "^2.1.2"
-  },
-  "dependencies": {
-    "sass": "^1.32.8",
-    "sass-loader": "^10.1.1"
+    "prettier": "^2.1.2",
+    "@nuxtjs/tailwindcss": "^3.1.0",
+    "@nuxtjs/vercel-builder": "^0.19.0"
   }
 }
