@@ -14,7 +14,7 @@
           </div>
           <img src="../../assets/images/illu-1.png" />
         </div>
-        <div class="card" @click="goToNextPage">
+        <div class="card card--orange" @click="goToNextPage">
           <div>
             <h2>Crée ta colocation</h2>
             <p>Tu souhaites mettre de l’ordre dans ta coloc ? Commence par la créer !</p>
@@ -60,6 +60,11 @@ export default {
     padding: 17px 0 20px 20px;
     margin-bottom: 28px;
     filter: drop-shadow(2px 4px 6px rgba(20, 20, 20, 0.08));
+
+    &--orange {
+      background: #fc8256;
+      box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.35);
+    }
 
     h2 {
       font-weight: 600;
