@@ -19,7 +19,7 @@
 
         <div id="etape-2" v-if="step === 2">
           <div class="bg-blue-10 mb-4" v-if="step === 2">
-            <p class="p-4">
+            <p class="p-6">
               Ensuite, choisis la <b>difficulté</b> de cette tâche : c’est à toi de la définir en fonction du logement
               ou de le pénibilité que vous associez à cette tâche.
             </p>
@@ -38,7 +38,7 @@
 
           <div id="etape-3" v-if="step === 3">
             <div class="bg-blue-10 mb-4" v-if="step !== 3">
-              <p class="p-4">
+              <p class="p-6">
                 Enfin, choisis sa <b>récurrence</b> : elle te permet de différencier les tâches récurrentes quotidiennes
                 (au moins une fois par jour) des tâches occassionnelles hebdomadaires (maximum une fois par semaine).
               </p>
@@ -55,7 +55,7 @@
         <div id="etape-4">
           <div class="bg-blue-10 mb-4" v-if="step === 4">
             <img src="../../assets/styles/images/maindoigt.svg">
-            <p class="p-4">
+            <p class="p-6">
               Et voilà ! Maintenant tu peux l’ajouter à ta liste de tâche.
             </p>
           </div>
