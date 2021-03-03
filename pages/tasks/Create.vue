@@ -6,7 +6,7 @@
       <div class="mx-5">
 
         <div id="etape-1">
-          <div class="bg-blue-10 mb-4 flex" v-if="step === 1">
+          <div class="bg-blue-10 mb-4 flex content" v-if="step === 1">
             <p class="p-6">
               Choisis <b>un nom de tâche clair</b> pour que tout le monde le comprenne ; tu peux aussi donner un nom
               très personnalisé avec tes propres termes !
@@ -18,7 +18,7 @@
         </div>
 
         <div id="etape-2">
-          <div class="bg-blue-10 mb-4 flex" v-if="step === 2">
+          <div class="bg-blue-10 mb-4 flex content" v-if="step === 2">
             <p class="p-6">
               Ensuite, choisis la <b>difficulté</b> de cette tâche : c’est à toi de la définir en fonction du logement
               ou de le pénibilité que vous associez à cette tâche.
@@ -48,7 +48,7 @@
 
 
         <div id="etape-3">
-          <div class="bg-blue-10 mb-4 flex" v-if="step === 3">
+          <div class="bg-blue-10 mb-4 flex content" v-if="step === 3">
             <p class="p-6">
               Enfin, choisis sa <b>récurrence</b> : elle te permet de différencier les tâches récurrentes quotidiennes
               (au moins une fois par jour) des tâches occassionnelles hebdomadaires (maximum une fois par semaine).
@@ -72,7 +72,7 @@
         </div>
 
         <div id="etape-4">
-          <div class="bg-blue-10 mb-4 flex" v-if="step === 4">
+          <div class="bg-blue-10 mb-4 flex content" v-if="step === 4">
             <p class="p-6">
               Et voilà ! Maintenant tu peux l’ajouter à ta liste de tâche.
             </p>
@@ -138,4 +138,14 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.content {
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 0;
+    top: 35px;
+  }
+}
+</style>
