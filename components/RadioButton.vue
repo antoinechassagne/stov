@@ -1,7 +1,6 @@
 <template>
-  <div class="inline-block rounded-2xl bg-white checked:bg-yellow-100 checked:border-transparent border-2 border-gray-70 h-8 font-semibold text-center text-black py-1">
-    <input type="radio" :name="name" class="hidden">
-    <label> {{label}} </label>
+  <div class="inline-block rounded-2xl border-2 border-gray-70 h-8 font-semibold text-center text-black py-1"  @click="$emit('click')">
+    <slot/>
   </div>
 </template>
 
