@@ -33,8 +33,11 @@ export default {
   box-sizing: border-box;
   border-radius: 4px;
   padding: 12px 22px;
-  color: #b9b9b9;
   font-weight: 300;
+
+  &::placeholder {
+    color: #b9b9b9;
+  }
 
   &:focus {
     outline-color: #0410f1;
