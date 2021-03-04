@@ -18,7 +18,7 @@ export default {
     ],
   },
   css: ["~/assets/styles/main.scss"],
-  plugins: ["~/plugins/route-link"],
+  plugins: [],
   components: true,
   buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/pwa"],
   modules: ["@nuxtjs/pwa"],
