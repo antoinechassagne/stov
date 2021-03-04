@@ -7,7 +7,7 @@
 
         <div id="etape-1">
           <div class="bg-blue-10 mb-4 flex content" v-if="step === 1">
-            <p class="p-6">
+            <p class="pt-6 pb-6 pl-6 pr-20">
               Choisis <b>un nom de tâche clair</b> pour que tout le monde le comprenne ; tu peux aussi donner un nom
               très personnalisé avec tes propres termes !
             </p>
@@ -19,7 +19,7 @@
 
         <div id="etape-2">
           <div class="bg-blue-10 mb-4 flex content" v-if="step === 2">
-            <p class="p-6">
+            <p class="pt-6 pb-6 pl-6 pr-20">
               Ensuite, choisis la <b>difficulté</b> de cette tâche : c’est à toi de la définir en fonction du logement
               ou de le pénibilité que vous associez à cette tâche.
             </p>
@@ -34,7 +34,7 @@
                 Facile
               </RadioButton>
               <RadioButton class="px-8" @click="difficultyRadios(false, true, false)"
-                           v-bind:class="isClickedMedium ? 'bg-yellow-100 border-none shadow-inner': 'bg-white border-2 border-gray-70'">
+                           v-bind:class="isClickedMedium ? 'bg-yellow-70 border-none shadow-inner': 'bg-white border-2 border-gray-70'">
                 Moyen
               </RadioButton>
               <RadioButton class="px-8" @click="difficultyRadios(false, false, true)"
@@ -49,7 +49,7 @@
 
         <div id="etape-3">
           <div class="bg-blue-10 mb-4 flex content" v-if="step === 3">
-            <p class="p-6">
+            <p class="pt-6 pb-6 pl-6 pr-20">
               Enfin, choisis sa <b>récurrence</b> : elle te permet de différencier les tâches récurrentes quotidiennes
               (au moins une fois par jour) des tâches occassionnelles hebdomadaires (maximum une fois par semaine).
             </p>
@@ -59,11 +59,11 @@
             <label>Récurrence de la tâche</label>
             <div class="flex space-x-5 mt-3 pb-5">
               <RadioButton class="px-12"
-                           v-bind:class="isClickedDaily ? 'bg-yellow-100 border-none shadow-inner': 'bg-white border-2 border-gray-70'"
+                           v-bind:class="isClickedDaily ? 'bg-yellow-70 border-none shadow-inner': 'bg-white border-2 border-gray-70'"
                            @click="defineRecurrency(true, false)">Quotidienne
               </RadioButton>
               <RadioButton class="px-12"
-                           v-bind:class="isClickedWeekly ? 'bg-yellow-100 border-none shadow-inner': 'bg-white border-2 border-gray-70'"
+                           v-bind:class="isClickedWeekly ? 'bg-yellow-70 border-none shadow-inner': 'bg-white border-2 border-gray-70'"
                            @click="defineRecurrency(false,true)">Hebdomadaire
               </RadioButton>
             </div>
@@ -73,7 +73,7 @@
 
         <div id="etape-4">
           <div class="bg-blue-10 mb-4 flex content" v-if="step === 4">
-            <p class="p-6">
+            <p class="pt-6 pb-6 pl-6 pr-20">
               Et voilà ! Maintenant tu peux l’ajouter à ta liste de tâche.
             </p>
             <img src="../../assets/styles/images/maindoigt.svg">
@@ -145,7 +145,7 @@ export default {
   img {
     position: absolute;
     right: 0;
-    top: 35px;
+    top: 60px;
   }
 }
 </style>
